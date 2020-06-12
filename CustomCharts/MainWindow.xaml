@@ -10,11 +10,11 @@
 		
 		Title="MainWindow" Height="450" Width="800">
 	
-	<Grid>
-		<CustomCharts:Card Name="Hello">
-			<CustomCharts:Card.Content>
-				<TextBlock Text="Wow coole sache!"/>
-			</CustomCharts:Card.Content>
+	<StackPanel>
+		<CustomCharts:Card Name="TestCard">
+			<CustomCharts:Card.CustomContent>
+				<TextBlock Text="Hello World!"/>
+			</CustomCharts:Card.CustomContent>
 			<CustomCharts:Card.Front>
 				<TextBlock Text="Wow vordere sache!"/>
 			</CustomCharts:Card.Front>
@@ -23,12 +23,8 @@
 			</CustomCharts:Card.Back>
 		</CustomCharts:Card>
 
-		<Button Click="Button_Click" Width="50" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top">
-			Hello
-		</Button>
+		<Button Click="Button_Click" Width="50" Height="20" Content="Test"/>
 
-
-
-	</Grid>
+	</StackPanel>
 	
 </Window>

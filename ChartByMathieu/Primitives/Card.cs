@@ -15,12 +15,12 @@ namespace ChartByMathieu {
 
 		#region dependencyProperties
 
-		public FrameworkElement Content {
-			get { return (FrameworkElement)GetValue(ContentProperty); }
-			set { SetValue(ContentProperty, value); }
+		public FrameworkElement CustomContent {
+			get { return (FrameworkElement)GetValue(CustomContentProperty); }
+			set { SetValue(CustomContentProperty, value); }
 		}
-		public static DependencyProperty ContentProperty =
-			DependencyProperty.Register(nameof(Content), typeof(FrameworkElement), typeof(Card), new PropertyMetadata());
+		public static DependencyProperty CustomContentProperty =
+			DependencyProperty.Register(nameof(CustomContent), typeof(FrameworkElement), typeof(Card), new PropertyMetadata());
 
 		public FrameworkElement Front {
 			get { return (FrameworkElement)GetValue(FrontProperty); }

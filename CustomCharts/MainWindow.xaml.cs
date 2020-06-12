@@ -8,7 +8,7 @@ namespace CustomCharts {
 		}
 
 		private void Button_Click( object sender, RoutedEventArgs e ) {
-			this.Hello.isDetailed = !this.Hello.isDetailed;
+			this.TestCard.isDetailed = !this.TestCard.isDetailed;
 		}
 	}
 }

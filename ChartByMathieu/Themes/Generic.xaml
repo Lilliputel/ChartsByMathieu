@@ -38,9 +38,9 @@
 							BorderBrush="{TemplateBinding BorderBrush}"
 							BorderThickness="{TemplateBinding BorderThickness}"
 							CornerRadius="{TemplateBinding CornerRadius}">
-						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" 
-										x:Name="test"
-										ContentSource="{TemplateBinding Front}"/>
+						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
+										  Content="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:Card}}, Path=CustomContent, 
+											Converter={StaticResource Debugger}, UpdateSourceTrigger=PropertyChanged}"/>
 					</Border>
 				</ControlTemplate>
 			</Setter.Value>
@@ -75,18 +75,4 @@
 		</Setter>
 	</Style>
 
-
-	<Style TargetType="{x:Type local:CustomControl1}">
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type local:CustomControl1}">
-					<Border Background="{TemplateBinding Background}"
-							BorderBrush="{TemplateBinding BorderBrush}"
-							BorderThickness="{TemplateBinding BorderThickness}">
-						<ContentPresenter Content="{TemplateBinding Content}"/>
-					</Border>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
 </ResourceDictionary>
