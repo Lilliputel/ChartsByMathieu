@@ -38,10 +38,25 @@
 							BorderBrush="{TemplateBinding BorderBrush}"
 							BorderThickness="{TemplateBinding BorderThickness}"
 							CornerRadius="{TemplateBinding CornerRadius}">
-						<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
-										  Content="{Binding RelativeSource={RelativeSource AncestorType={x:Type local:Card}}, Path=CustomContent, 
-											Converter={StaticResource Debugger}, UpdateSourceTrigger=PropertyChanged}"/>
+						<ContentPresenter x:Name="presenter" 
+										  HorizontalAlignment="Center" 
+										  VerticalAlignment="Center"/>
 					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsDetailed" Value="True">
+							<Setter TargetName="presenter" Property="Content" 
+								Value="{Binding Back, RelativeSource={RelativeSource TemplatedParent}}"/>
+							<Setter TargetName="presenter" Property="ContentTemplate"
+								Value="{Binding BackTemplate, RelativeSource={RelativeSource TemplatedParent}}"/>
+						</Trigger>
+
+						<Trigger Property="IsDetailed" Value="False">
+							<Setter TargetName="presenter" Property="Content" 
+								Value="{Binding Front, RelativeSource={RelativeSource TemplatedParent}}"/>
+							<Setter TargetName="presenter" Property="ContentTemplate"
+								Value="{Binding FrontTemplate, RelativeSource={RelativeSource TemplatedParent}}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>

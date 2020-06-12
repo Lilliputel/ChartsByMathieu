@@ -15,35 +15,46 @@ namespace ChartByMathieu {
 
 		#region dependencyProperties
 
-		public FrameworkElement CustomContent {
-			get { return (FrameworkElement)GetValue(CustomContentProperty); }
-			set { SetValue(CustomContentProperty, value); }
-		}
-		public static DependencyProperty CustomContentProperty =
-			DependencyProperty.Register(nameof(CustomContent), typeof(FrameworkElement), typeof(Card), new PropertyMetadata());
-
-		public FrameworkElement Front {
-			get { return (FrameworkElement)GetValue(FrontProperty); }
+		public object Front {
+			get { return (object)GetValue(FrontProperty); }
 			set { SetValue(FrontProperty, value); }
 		}
-		public static DependencyProperty FrontProperty =
-			DependencyProperty.Register(nameof(Front), typeof(FrameworkElement), typeof(Card), new PropertyMetadata());
 
-		public FrameworkElement Back {
-			get { return (FrameworkElement)GetValue(BackProperty); }
+		public static readonly DependencyProperty FrontProperty =
+		DependencyProperty.Register(nameof(Front), typeof(object), typeof(Card), new PropertyMetadata(null));
+
+		public DataTemplate FrontTemplate {
+			get { return (DataTemplate)GetValue(FrontTemplateProperty); }
+			set { SetValue(FrontTemplateProperty, value); }
+		}
+
+		public static readonly DependencyProperty FrontTemplateProperty =
+		DependencyProperty.Register(nameof(FrontTemplate), typeof(DataTemplate), typeof(Card), new PropertyMetadata(null));
+
+		public object Back {
+			get { return (object)GetValue(BackProperty); }
 			set { SetValue(BackProperty, value); }
 		}
-		public static DependencyProperty BackProperty =
-			DependencyProperty.Register(nameof(Back), typeof(FrameworkElement), typeof(Card), new PropertyMetadata());
 
+		public static readonly DependencyProperty BackProperty =
+		DependencyProperty.Register(nameof(Back), typeof(object), typeof(Card), new PropertyMetadata(null));
 
-
-		public bool isDetailed {
-			get { return (bool)GetValue(isDetailedProperty); }
-			set { SetValue(isDetailedProperty, value); }
+		public DataTemplate BackTemplate {
+			get { return (DataTemplate)GetValue(BackTemplateProperty); }
+			set { SetValue(BackTemplateProperty, value); }
 		}
-		public static readonly DependencyProperty isDetailedProperty =
-			DependencyProperty.Register(nameof(isDetailed), typeof(bool), typeof(Card), new PropertyMetadata(false));
+
+		public static readonly DependencyProperty BackTemplateProperty =
+		DependencyProperty.Register(nameof(BackTemplate), typeof(DataTemplate), typeof(Card), new PropertyMetadata(null));
+
+
+
+		public bool IsDetailed {
+			get { return (bool)GetValue(IsDetailedProperty); }
+			set { SetValue(IsDetailedProperty, value); }
+		}
+		public static readonly DependencyProperty IsDetailedProperty =
+			DependencyProperty.Register(nameof(IsDetailed), typeof(bool), typeof(Card), new PropertyMetadata(false));
 
 
 

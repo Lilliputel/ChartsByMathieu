@@ -12,11 +12,11 @@
 	
 	<StackPanel>
 		<CustomCharts:Card Name="TestCard">
-			<CustomCharts:Card.CustomContent>
-				<TextBlock Text="Hello World!"/>
-			</CustomCharts:Card.CustomContent>
 			<CustomCharts:Card.Front>
-				<TextBlock Text="Wow vordere sache!"/>
+				<StackPanel Orientation="Horizontal">
+					<Rectangle Fill="Azure" Height="60" Width="60"/>
+					<TextBlock Text="Wow vordere sache!"/>
+				</StackPanel>
 			</CustomCharts:Card.Front>
 			<CustomCharts:Card.Back>
 				<TextBlock Text="Wow hintere sache!"/>
