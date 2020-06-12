@@ -17,19 +17,19 @@ namespace ChartByMathieu {
 		#region dependencyProperties
 
 		public static readonly DependencyProperty StartValueProperty =
-			DependencyProperty.Register("StartValue", typeof(double), typeof(Bar), new PropertyMetadata(0));
+			DependencyProperty.Register(nameof(StartValue), typeof(double), typeof(Bar), new PropertyMetadata(0.0));
 
 		public static readonly DependencyProperty EndValueProperty =
-			DependencyProperty.Register("EndValue", typeof(double), typeof(Bar), new PropertyMetadata(0));
+			DependencyProperty.Register(nameof(EndValue), typeof(double), typeof(Bar), new PropertyMetadata(1.0));
 
 		public static readonly DependencyProperty AngleProperty =
-			DependencyProperty.Register("Angle", typeof(double), typeof(Bar), new PropertyMetadata(0));
+			DependencyProperty.Register(nameof(Angle), typeof(double), typeof(Bar), new PropertyMetadata(0.0));
 
 		public static readonly DependencyProperty BarColorProperty =
-			DependencyProperty.Register("BarColor", typeof(SolidColorBrush), typeof(Bar), new PropertyMetadata(0));
+			DependencyProperty.Register(nameof(BarColor), typeof(SolidColorBrush), typeof(Bar), new PropertyMetadata(new SolidColorBrush(Colors.White)));
 
 		public static readonly DependencyProperty CornerRadiusProperty =
-			DependencyProperty.Register("CornerRadius", typeof(CornerRadius), typeof(Bar), new PropertyMetadata(0));
+			DependencyProperty.Register(nameof(CornerRadius), typeof(CornerRadius), typeof(Bar), new PropertyMetadata(new CornerRadius(0)));
 
 		#endregion
 
