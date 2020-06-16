@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows.Data;
 
-namespace ChartByMathieu {
+namespace ChartByMathieu.Converter {
 	public class DebugConverter : IValueConverter {
 		public object Convert( object value, Type targetType, object parameter, CultureInfo culture ) {
 			return value;

@@ -3,7 +3,6 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:local="clr-namespace:CustomCharts"
 		mc:Ignorable="d"
 		
 		xmlns:CustomCharts="clr-namespace:ChartByMathieu;assembly=ChartByMathieu"
@@ -11,11 +10,16 @@
 		Title="MainWindow" Height="450" Width="800">
 	
 	<StackPanel>
-		<CustomCharts:Card Name="TestCard">
+		
+		
+		<CustomCharts:Card Name="TestCard"
+						   Background="WhiteSmoke"
+						   Height="80"
+						   Width="400">
 			<CustomCharts:Card.Front>
 				<StackPanel Orientation="Horizontal">
 					<Rectangle Fill="Azure" Height="60" Width="60"/>
-					<TextBlock Text="Wow vordere sache!"/>
+					<TextBlock Text="Wow vordere sache!" VerticalAlignment="Center"/>
 				</StackPanel>
 			</CustomCharts:Card.Front>
 			<CustomCharts:Card.Back>
@@ -23,8 +27,8 @@
 			</CustomCharts:Card.Back>
 		</CustomCharts:Card>
 
-		<Button Click="Button_Click" Width="50" Height="20" Content="Test"/>
-
+		
+		
 	</StackPanel>
 	
 </Window>

@@ -63,7 +63,7 @@ namespace ChartByMathieu {
 			set { SetValue(CornerRadiusProperty, value); }
 		}
 		public static readonly DependencyProperty CornerRadiusProperty =
-			DependencyProperty.Register(nameof(CornerRadius), typeof(CornerRadius), typeof(Card));
+			DependencyProperty.Register(nameof(CornerRadius), typeof(CornerRadius), typeof(Card), new PropertyMetadata( new CornerRadius(5) ));
 
 		#endregion
 
