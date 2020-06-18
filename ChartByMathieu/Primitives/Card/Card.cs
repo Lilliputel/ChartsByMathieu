@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace ChartByMathieu {
+namespace MathieusCharts {
 
 	public class Card : Control {
 

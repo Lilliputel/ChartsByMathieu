@@ -1,0 +1,9 @@
+<ResourceDictionary	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<ResourceDictionary.MergedDictionaries>
+		
+		<!-- Primitives -->
+		<ResourceDictionary Source="/MathieusCustomControls;component/WatermarkedTextBox/WatermarkedTextBox.xaml" />
+
+		
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

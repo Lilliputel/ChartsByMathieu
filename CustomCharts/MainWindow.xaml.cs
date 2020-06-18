@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace CustomCharts {
+namespace DemoApplication {
 
 	public partial class MainWindow : Window {
 		public MainWindow() {

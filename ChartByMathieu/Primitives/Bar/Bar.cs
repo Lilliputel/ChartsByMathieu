@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace ChartByMathieu {
+namespace MathieusCharts {
 
 	public class Bar : Control {
 

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChartByMathieu", "ChartByMathieu\ChartByMathieu.csproj", "{4271F25E-AFA5-480A-A31F-F6AF2E1EF56E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathieusCharts", "ChartByMathieu\MathieusCharts.csproj", "{4271F25E-AFA5-480A-A31F-F6AF2E1EF56E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomCharts", "CustomCharts\CustomCharts.csproj", "{08F538A2-0079-4784-96CE-5BB2B5879D72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoApplication", "CustomCharts\DemoApplication.csproj", "{08F538A2-0079-4784-96CE-5BB2B5879D72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathieusCustomControls", "MathieusCustomControls\MathieusCustomControls.csproj", "{CE8FB441-7913-4FAC-A1D3-4235CD404AA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{08F538A2-0079-4784-96CE-5BB2B5879D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08F538A2-0079-4784-96CE-5BB2B5879D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08F538A2-0079-4784-96CE-5BB2B5879D72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE8FB441-7913-4FAC-A1D3-4235CD404AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE8FB441-7913-4FAC-A1D3-4235CD404AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE8FB441-7913-4FAC-A1D3-4235CD404AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE8FB441-7913-4FAC-A1D3-4235CD404AA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

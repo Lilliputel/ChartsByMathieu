@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Media;
+﻿using System.Windows.Media;
 
-namespace CustomCharts {
+namespace DemoApplication {
 	public class TestClass {
 
 		public double Start { get; set; }
