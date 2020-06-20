@@ -4,6 +4,7 @@
 		<!-- Primitives -->
 		<ResourceDictionary Source="/MathieusCustomControls;component/WatermarkedTextBox/WatermarkedTextBox.xaml" />
 
-		
 	</ResourceDictionary.MergedDictionaries>
+
+
 </ResourceDictionary>

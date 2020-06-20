@@ -24,7 +24,7 @@ namespace MathieusCustomControls {
 			set { SetValue(WatermarkColorProperty, value); }
 		}
 		public static readonly DependencyProperty WatermarkColorProperty =
-			DependencyProperty.Register("WatermarkColor", typeof(SolidColorBrush), typeof(WatermarkedTextBox), new PropertyMetadata(new SolidColorBrush(Colors.Gainsboro)));
+			DependencyProperty.Register("WatermarkColor", typeof(SolidColorBrush), typeof(WatermarkedTextBox), new PropertyMetadata(new SolidColorBrush(Colors.SlateGray)));
 
 		#endregion
 

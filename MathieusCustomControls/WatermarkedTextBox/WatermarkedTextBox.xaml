@@ -1,9 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:local="clr-namespace:MathieusCustomControls">
-
-	<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
-
+					xmlns:local="clr-namespace:MathieusCustomControls"
+					xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
 	<Style TargetType="{x:Type local:WatermarkedTextBox}">
 		<Setter Property="Template">
@@ -13,16 +11,23 @@
 							BorderBrush="{TemplateBinding BorderBrush}"
 							BorderThickness="{TemplateBinding BorderThickness}">
 						<Grid>
-							<TextBlock Margin="5,2" 
-									   Text="{TemplateBinding WatermarkText}" 
-									   Foreground="{TemplateBinding WatermarkColor}"
-									   Background="Transparent"
-									   Visibility="{Binding ElementName=txtUserEntry, Path=Text, Converter={StaticResource BooleanToVisibilityConverter}}"/>
 							<TextBox x:Name="txtUserEntry" 
 									 Background="Transparent"
 									 Text="{TemplateBinding Text}"/>
+							<TextBlock x:Name="PART_Watermark"
+									   Margin="5,0"
+									   Text="{TemplateBinding WatermarkText}" 
+									   Foreground="{TemplateBinding WatermarkColor}"
+									   Background="Transparent"
+									   Visibility="Collapsed"
+									   IsHitTestVisible="False"/>
 						</Grid>
 					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger SourceName="txtUserEntry" Property="Text" Value="{x:Static sys:String.Empty}">
+							<Setter TargetName="PART_Watermark" Property="Visibility" Value="Visible"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>

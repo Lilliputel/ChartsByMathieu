@@ -24,7 +24,8 @@
 			</CustomCharts:Card.Back>
 		</CustomCharts:Card>
 
-		<CustomControls:WatermarkedTextBox />
+		<CustomControls:WatermarkedTextBox/>
+
 
 	</StackPanel>
 	
