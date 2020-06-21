@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace MathieusCharts {
 
-	public class Card : Control {
+	public class Card : ContentControl {
 
 		#region initializer
 
@@ -19,33 +19,29 @@ namespace MathieusCharts {
 			get { return (object)GetValue(FrontProperty); }
 			set { SetValue(FrontProperty, value); }
 		}
-
 		public static readonly DependencyProperty FrontProperty =
-		DependencyProperty.Register(nameof(Front), typeof(object), typeof(Card), new PropertyMetadata(null));
+			DependencyProperty.Register(nameof(Front), typeof(object), typeof(Card), new PropertyMetadata(null));
 
 		public DataTemplate FrontTemplate {
 			get { return (DataTemplate)GetValue(FrontTemplateProperty); }
 			set { SetValue(FrontTemplateProperty, value); }
 		}
-
 		public static readonly DependencyProperty FrontTemplateProperty =
-		DependencyProperty.Register(nameof(FrontTemplate), typeof(DataTemplate), typeof(Card), new PropertyMetadata(null));
+			DependencyProperty.Register(nameof(FrontTemplate), typeof(DataTemplate), typeof(Card), new PropertyMetadata(null));
 
 		public object Back {
 			get { return (object)GetValue(BackProperty); }
 			set { SetValue(BackProperty, value); }
 		}
-
 		public static readonly DependencyProperty BackProperty =
-		DependencyProperty.Register(nameof(Back), typeof(object), typeof(Card), new PropertyMetadata(null));
+			DependencyProperty.Register(nameof(Back), typeof(object), typeof(Card), new PropertyMetadata(null));
 
 		public DataTemplate BackTemplate {
 			get { return (DataTemplate)GetValue(BackTemplateProperty); }
 			set { SetValue(BackTemplateProperty, value); }
 		}
-
 		public static readonly DependencyProperty BackTemplateProperty =
-		DependencyProperty.Register(nameof(BackTemplate), typeof(DataTemplate), typeof(Card), new PropertyMetadata(null));
+			DependencyProperty.Register(nameof(BackTemplate), typeof(DataTemplate), typeof(Card), new PropertyMetadata(null));
 
 
 
@@ -64,6 +60,15 @@ namespace MathieusCharts {
 		}
 		public static readonly DependencyProperty CornerRadiusProperty =
 			DependencyProperty.Register(nameof(CornerRadius), typeof(CornerRadius), typeof(Card), new PropertyMetadata( new CornerRadius(5) ));
+
+		public new Thickness Padding {
+			get { return (Thickness)GetValue(PaddingProperty); }
+			set { SetValue(PaddingProperty, value); }
+		}
+		public static readonly new DependencyProperty PaddingProperty =
+			DependencyProperty.Register("Padding", typeof(Thickness), typeof(Card), new PropertyMetadata( new Thickness(5) ));
+
+
 
 		#endregion
 

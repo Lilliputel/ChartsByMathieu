@@ -2,31 +2,103 @@
 		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		
+		xmlns:local="clr-namespace:DemoApplication"
 		xmlns:CustomCharts="clr-namespace:MathieusCharts;assembly=MathieusCharts"
 		xmlns:CustomControls="clr-namespace:MathieusCustomControls;assembly=MathieusCustomControls"
 		Title="MainWindow" Height="450" Width="800">
 
 	<StackPanel>
+		<StackPanel.Resources>
 
+			<local:SelectorTest x:Key="SelectorTest"/>
+
+			<DataTemplate x:Key="FrontTemplate">
+				<Grid Margin="10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<Rectangle Width="50" Height="30" 
+							   HorizontalAlignment="Left"
+							   VerticalAlignment="Center">
+						<Rectangle.Fill>
+							<SolidColorBrush Color="{Binding Farbe}"/>
+						</Rectangle.Fill>
+					</Rectangle>
+					<TextBlock Grid.Column="2" VerticalAlignment="Center">
+						<Run Text="Titel: "/>
+						<Run Text="{Binding Titel}" FontWeight="Bold"/>
+					</TextBlock>
+				</Grid>
+			</DataTemplate>
+
+			<DataTemplate x:Key="BackTemplate">
+				<Grid Margin="10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+					</Grid.ColumnDefinitions>
+					<Rectangle Width="50" Height="30" 
+							   HorizontalAlignment="Left"
+							   VerticalAlignment="Center">
+						<Rectangle.Fill>
+							<SolidColorBrush Color="{Binding Farbe}"/>
+						</Rectangle.Fill>
+					</Rectangle>
+					<StackPanel Grid.Column="2" VerticalAlignment="Center">
+						<TextBlock>
+							<Run Text="Start-Double: "/>
+							<Run Text="{Binding Start}" FontWeight="Bold"/>
+						</TextBlock>
+						<TextBlock>
+							<Run Text="End-Double: "/>
+							<Run Text="{Binding Ende}" FontWeight="Bold"/>
+						</TextBlock>
+					</StackPanel>
+				</Grid>
+			</DataTemplate>
+			
+		</StackPanel.Resources>
 
 		<CustomCharts:Card Name="TestCard"
 						   Background="WhiteSmoke"
 						   Height="80"
-						   Width="400">
-			<CustomCharts:Card.Front>
-				<StackPanel Orientation="Horizontal">
-					<Rectangle Fill="Azure" Height="60" Width="60"/>
-					<TextBlock Text="Wow vordere sache!" VerticalAlignment="Center"/>
-				</StackPanel>
-			</CustomCharts:Card.Front>
-			<CustomCharts:Card.Back>
-				<TextBlock Text="Wow hintere sache!"/>
-			</CustomCharts:Card.Back>
-		</CustomCharts:Card>
+						   Width="400"
+						   Front="{Binding}"
+						   FrontTemplate="{StaticResource FrontTemplate}"
+						   Back="{Binding}"
+						   BackTemplate="{StaticResource BackTemplate}"/>
 
 		<CustomControls:WatermarkedTextBox/>
 
+		<CustomCharts:CardView x:Name="TestCardView" 
+							   ItemsSource="{Binding}"
+							   Title="Geile Testende CardView">
 
+			<CustomCharts:CardView.TitleTemplate>
+				<DataTemplate>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Fill="Azure" Height="10" Width="10"/>
+						<ContentPresenter Content="{Binding}"/>
+					</StackPanel>
+				</DataTemplate>
+			</CustomCharts:CardView.TitleTemplate>
+
+			<CustomCharts:CardView.ItemTemplate>
+				<DataTemplate x:Name="Test">
+					<CustomCharts:Card HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" 
+									   VerticalAlignment="Stretch" VerticalContentAlignment="Stretch"
+									   Front="{Binding}"
+									   FrontTemplate="{StaticResource FrontTemplate}"
+									   Back="{Binding}"
+									   BackTemplate="{StaticResource BackTemplate}" 
+									   IsHitTestVisible="True"/>
+				</DataTemplate>
+			</CustomCharts:CardView.ItemTemplate>
+
+		</CustomCharts:CardView>
 	</StackPanel>
 	
 </Window>

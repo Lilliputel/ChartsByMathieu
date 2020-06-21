@@ -11,4 +11,8 @@
 		<ProjectReference Include="..\MathieusCustomControls\MathieusCustomControls.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Debugging-Helper\" />
+	</ItemGroup>
+
 </Project>

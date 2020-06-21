@@ -6,19 +6,29 @@
 	<converter:DebugConverter x:Key="Debugger"/>
 
 	<Style TargetType="{x:Type local:Card}">
+
+		<Setter Property="HorizontalAlignment" Value="Stretch"/>
+		<Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+		<Setter Property="VerticalAlignment" Value="Stretch"/>
+		<Setter Property="VerticalContentAlignment" Value="Stretch"/>
+		
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type local:Card}">
-
+					
 					<Border Background="{TemplateBinding Background}"
 							BorderBrush="{TemplateBinding BorderBrush}"
 							BorderThickness="{TemplateBinding BorderThickness}"
-							CornerRadius="{TemplateBinding CornerRadius}">
+							CornerRadius="{TemplateBinding CornerRadius}"
+							Padding="{TemplateBinding Padding}">
 						<ContentPresenter x:Name="presenter" 
-										  HorizontalAlignment="Center" 
-										  VerticalAlignment="Center"/>
+										  HorizontalAlignment="Stretch" 
+										  VerticalAlignment="Stretch"/>
 					</Border>
+					
 					<ControlTemplate.Triggers>
+						
+						<!--#region Triggers for Displaying Content Front and Back -->
 						<Trigger Property="IsDetailed" Value="False">
 							<Setter TargetName="presenter" 
 									Property="Content" 
@@ -41,6 +51,9 @@
 									Property="Tag"
 									Value="True"/>
 						</Trigger>
+						<!--#endregion-->
+
+						<!--#region Triggers for Catching ClickEvents -->
 						<EventTrigger RoutedEvent="MouseDown">
 							<EventTrigger.Actions>
 								<BeginStoryboard>
@@ -63,7 +76,10 @@
 								</BeginStoryboard>
 							</EventTrigger.Actions>
 						</EventTrigger>
+						<!--#endregion-->
+						
 					</ControlTemplate.Triggers>
+					
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>

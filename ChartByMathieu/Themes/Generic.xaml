@@ -9,6 +9,7 @@
 		
 		<!-- Advanced Controls -->
 		<ResourceDictionary Source="/MathieusCharts;component/GanttChart/GanttChart.xaml" />
+		<ResourceDictionary Source="/MathieusCharts;component/CardView/CardView.xaml" />
 		
 		
 	</ResourceDictionary.MergedDictionaries>
