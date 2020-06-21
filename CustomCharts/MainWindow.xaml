@@ -9,9 +9,7 @@
 
 	<StackPanel>
 		<StackPanel.Resources>
-
-			<local:SelectorTest x:Key="SelectorTest"/>
-
+			
 			<DataTemplate x:Key="FrontTemplate">
 				<Grid Margin="10">
 					<Grid.ColumnDefinitions>
@@ -73,32 +71,39 @@
 
 		<CustomControls:WatermarkedTextBox/>
 
-		<CustomCharts:CardView x:Name="TestCardView" 
-							   ItemsSource="{Binding}"
-							   Title="Geile Testende CardView">
-
-			<CustomCharts:CardView.TitleTemplate>
+		<HeaderedItemsControl x:Name="CardView" 
+							  ItemsSource="{Binding}"
+							  Width="400"
+							  Header="CardView als ItemsControl">
+			<HeaderedItemsControl.Template>
+				<ControlTemplate TargetType="{x:Type HeaderedItemsControl}">
+					<StackPanel>
+						<ContentPresenter ContentSource="Header"/>
+						<ItemsPresenter/>
+					</StackPanel>
+				</ControlTemplate>
+			</HeaderedItemsControl.Template>
+			<HeaderedItemsControl.HeaderTemplate>
 				<DataTemplate>
 					<StackPanel Orientation="Horizontal">
 						<Rectangle Fill="Azure" Height="10" Width="10"/>
-						<ContentPresenter Content="{Binding}"/>
+						<TextBlock Text="{Binding}"/>
 					</StackPanel>
 				</DataTemplate>
-			</CustomCharts:CardView.TitleTemplate>
-
-			<CustomCharts:CardView.ItemTemplate>
-				<DataTemplate x:Name="Test">
-					<CustomCharts:Card HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" 
-									   VerticalAlignment="Stretch" VerticalContentAlignment="Stretch"
+			</HeaderedItemsControl.HeaderTemplate>
+			<HeaderedItemsControl.ItemTemplate>
+				<DataTemplate>
+					<CustomCharts:Card Name="TestCard"
+									   Background="WhiteSmoke"
+									   Height="80"
 									   Front="{Binding}"
 									   FrontTemplate="{StaticResource FrontTemplate}"
 									   Back="{Binding}"
-									   BackTemplate="{StaticResource BackTemplate}" 
-									   IsHitTestVisible="True"/>
+									   BackTemplate="{StaticResource BackTemplate}"/>
 				</DataTemplate>
-			</CustomCharts:CardView.ItemTemplate>
-
-		</CustomCharts:CardView>
+			</HeaderedItemsControl.ItemTemplate>
+		</HeaderedItemsControl>
+		
 	</StackPanel>
 	
 </Window>

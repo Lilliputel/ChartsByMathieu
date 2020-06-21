@@ -14,7 +14,7 @@ namespace DemoApplication {
 			GenerateObjects();
 
 			this.TestCard.DataContext = TestKlasse;
-			this.TestCardView.DataContext = TestListe;
+			this.CardView.DataContext = TestListe;
 		}
 
 		private void GenerateObjects() {

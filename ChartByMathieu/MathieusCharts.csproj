@@ -6,9 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Page Update="CardView\CardView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="GanttChart\GanttChart.xaml">
       <SubType>Designer</SubType>
     </Page>
