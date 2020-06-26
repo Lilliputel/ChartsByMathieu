@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace MathieusCharts {
 
-	public class Card : ContentControl {
+	public class Card : Control {
 
 		#region initializer
 

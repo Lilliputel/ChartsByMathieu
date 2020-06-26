@@ -24,6 +24,11 @@
 							<Border.Margin>
 								<Thickness Top="0" Bottom="0" Right="0" Left="{TemplateBinding StartValue}"/>
 							</Border.Margin>
+
+							<ContentPresenter Content="{TemplateBinding Content}" 
+											  ContentTemplate="{TemplateBinding ContentTemplate}" 
+											  ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+											  ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
 						</Border>
 					</Grid>
 				</ControlTemplate>

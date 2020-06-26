@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 namespace MathieusCharts {
 
-	public class Bar : Control {
+	public class Bar : ContentControl {
 
 		#region initializer
 
