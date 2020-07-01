@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace MathieusCharts {
+namespace MathieusCustomControls {
 
 	public class GanttChart : Chart {
 

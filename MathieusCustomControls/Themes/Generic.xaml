@@ -2,8 +2,14 @@
 	<ResourceDictionary.MergedDictionaries>
 		
 		<!-- Primitives -->
-		<ResourceDictionary Source="/MathieusCustomControls;component/WatermarkedTextBox/WatermarkedTextBox.xaml" />
+		<ResourceDictionary Source="/MathieusCustomControls;component/Primitives/WatermarkedTextBox/WatermarkedTextBox.xaml" />
+		<ResourceDictionary Source="/MathieusCustomControls;component/Primitives/Bar/Bar.xaml" />
+		<ResourceDictionary Source="/MathieusCustomControls;component/Primitives/Card/Card.xaml" />
+		<ResourceDictionary Source="/MathieusCustomControls;component/Primitives/Chart/Chart.xaml" />
 
+		<!-- Advanced Controls -->
+		<ResourceDictionary Source="/MathieusCustomControls;component/GanttChart/GanttChart.xaml" />
+		
 	</ResourceDictionary.MergedDictionaries>
 
 

@@ -1,4 +1,4 @@
-﻿using MathieusCharts;
+﻿using MathieusCustomControls;
 using System.Windows;
 using System.Windows.Controls;
 

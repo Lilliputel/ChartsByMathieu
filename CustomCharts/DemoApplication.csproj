@@ -7,7 +7,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\ChartByMathieu\MathieusCharts.csproj" />
 		<ProjectReference Include="..\MathieusCustomControls\MathieusCustomControls.csproj" />
 	</ItemGroup>
 

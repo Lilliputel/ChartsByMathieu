@@ -1,7 +1,7 @@
 <ResourceDictionary	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:local="clr-namespace:MathieusCharts"
-					xmlns:converter="clr-namespace:MathieusCharts.Converter">
+					xmlns:local="clr-namespace:MathieusCustomControls"
+					xmlns:converter="clr-namespace:MathieusCustomControls.Converter">
 
 	<converter:DebugConverter x:Key="Debugger"/>
 

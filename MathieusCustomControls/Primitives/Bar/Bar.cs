@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace MathieusCharts {
+namespace MathieusCustomControls {
 
 	public class Bar : ContentControl {
 
@@ -22,9 +22,6 @@ namespace MathieusCharts {
 		public static readonly DependencyProperty EndValueProperty =
 			DependencyProperty.Register(nameof(EndValue), typeof(double), typeof(Bar), new PropertyMetadata(1.0));
 
-		public static readonly DependencyProperty AngleProperty =
-			DependencyProperty.Register(nameof(Angle), typeof(double), typeof(Bar), new PropertyMetadata(0.0));
-
 		public static readonly DependencyProperty BarColorProperty =
 			DependencyProperty.Register(nameof(BarColor), typeof(SolidColorBrush), typeof(Bar), new PropertyMetadata(new SolidColorBrush(Colors.White)));
 
@@ -43,11 +40,6 @@ namespace MathieusCharts {
 		public double EndValue {
 			get { return (double)GetValue(EndValueProperty); }
 			set { SetValue(EndValueProperty, value); }
-		}
-
-		public double Angle {
-			get { return (double)GetValue(AngleProperty); }
-			set { SetValue(AngleProperty, value); }
 		}
 
 		public SolidColorBrush BarColor {
